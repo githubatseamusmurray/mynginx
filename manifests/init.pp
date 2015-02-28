@@ -37,18 +37,18 @@ class mynginx {
 
 
   file { '/var/www':
-    ensure => 'directory',
-    mode   => '0644',
-    owner  => "${nginx::params::daemon_user}",
-    group  => "${nginx::params::root_group}",
-    before => File['/var/www/exercise-webpage'],
-    require => Package["${nginx::params::package_name}"],
+    ensure  => 'directory',
+    mode    => '0644',
+    owner   => $nginx::params::daemon_user,
+    group   => $nginx::params::root_group,
+    before  => File['/var/www/exercise-webpage'],
+    require => Package[$nginx::params::package_name],
   }
   
   file { '/var/www/exercise-webpage':
     ensure => 'directory',
-    owner  => "${nginx::params::daemon_user}",
-    group  => "${nginx::params::root_group}",
+    owner  => $nginx::params::daemon_user,
+    group  => $nginx::params::root_group,
     mode   => '0644',
   }
 
@@ -78,7 +78,6 @@ class mynginx {
     require => [Package['git'],File['/var/www/exercise-webpage']],
     onlyif  => "test -f /var/www/exercise-webpage/index.html",
   }
- 
 
 }
 
