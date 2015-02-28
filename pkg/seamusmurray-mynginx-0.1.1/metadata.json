@@ -5,36 +5,36 @@
   "summary": "Sample module to configure nginx to serve https://github.com/puppetlabs/exercise-webpage via TCP port 3000",
   "license": "Apache 2.0",
   "source": "https://github.com/githubatseamusmurray/mynginx",
-  "project_page": "https://github.com/githubatseamusmurray/mynginx",
+  "issues_url": "n/a",
   "operatingsystem_support": [
     {
+      "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "5.0",
         "6.0"
-      ],
-      "operatingsystem": "Debian"
+      ]
     },
     {
+      "operatingsystem": "RedHat",
       "operatingsystemrelease": [
         "5.0",
         "6.0",
         "7.0"
-      ],
-      "operatingsystem": "RedHat"
+      ]
     },
     {
       "operatingsystem": "SLES"
     },
     {
+      "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
         "14.04",
         "12.04",
         "10.04"
-      ],
-      "operatingsystem": "Ubuntu"
+      ]
     }
   ],
-  "issues_url": "n/a",
+  "project_page": "https://github.com/githubatseamusmurray/mynginx",
   "dependencies": [
     {"version_requirement":">= 0.2.2","name":"jfryman-nginx"},
     {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
