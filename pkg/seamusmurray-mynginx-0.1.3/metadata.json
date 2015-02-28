@@ -5,7 +5,6 @@
   "summary": "Sample module to configure nginx to serve https://github.com/puppetlabs/exercise-webpage via TCP port 3000",
   "license": "Apache 2.0",
   "source": "https://github.com/githubatseamusmurray/mynginx",
-  "project_page": "https://github.com/githubatseamusmurray/mynginx",
   "operatingsystem_support": [
     {
       "operatingsystemrelease": [
@@ -34,6 +33,7 @@
       "operatingsystem": "Ubuntu"
     }
   ],
+  "project_page": "https://github.com/githubatseamusmurray/mynginx",
   "issues_url": "n/a",
   "dependencies": [
     {"version_requirement":">= 0.2.2","name":"jfryman-nginx"},

@@ -1,11 +1,12 @@
 {
   "name": "seamusmurray-mynginx",
-  "version": "0.1.3",
+  "version": "0.1.2",
   "author": "seamusmurray",
   "summary": "Sample module to configure nginx to serve https://github.com/puppetlabs/exercise-webpage via TCP port 3000",
   "license": "Apache 2.0",
   "source": "https://github.com/githubatseamusmurray/mynginx",
   "project_page": "https://github.com/githubatseamusmurray/mynginx",
+  "issues_url": "n/a",
   "operatingsystem_support": [
     {
       "operatingsystemrelease": [
@@ -34,9 +35,8 @@
       "operatingsystem": "Ubuntu"
     }
   ],
-  "issues_url": "n/a",
   "dependencies": [
-    {"version_requirement":">= 0.2.2","name":"jfryman-nginx"},
-    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"},
+    {"version_requirement":">= 0.2.2","name":"jfryman-nginx"}
   ]
 }
