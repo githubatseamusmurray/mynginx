@@ -16,13 +16,13 @@
 #
 # === Limitations
 #
-#  This module is known to work with the following operating system families:
+# This module is known to work with the following operating system families:
 #
-#    RedHat 5, 6
-#    Debian 6.0.7 or newer
-#    Ubuntu 12.04 or newer
+#   RedHat 5, 6
+#   Debian 6.0.7 or newer
+#   Ubuntu 12.04 or newer
 #    
-#   This module does not open up inbound access to tcp port 3000 on the local firewall
+# This module does not open inbound access to tcp port 3000 on the local firewall
 #
 # === Authors
 #
@@ -57,26 +57,26 @@ class mynginx {
     listen_port => 3000,
   }
 
-  notice ( " nginx daemon_user is set to ${nginx::params::daemon_user} for osfamily of ${::osfamily} ")
-  notice ( " nginx package name is set to ${nginx::params::package_name} for osfamily of ${::osfamily} ")
+  notice("nginx daemon_user is set to ${nginx::params::daemon_user} for osfamily of ${::osfamily}")
+  notice("nginx package name is set to ${nginx::params::package_name} for osfamily of ${::osfamily}")
 
   package { 'git':
     ensure => 'present',
   }
 
   exec { 'git-clone':
-    path    => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ],
-    command => "git clone https://github.com/puppetlabs/exercise-webpage /var/www/exercise-webpage",
+    path    => [ '/bin:/sbin:/usr/bin:/usr/sbin' ],
+    command => 'git clone https://github.com/puppetlabs/exercise-webpage /var/www/exercise-webpage',
     require => [Package['git'],File['/var/www/exercise-webpage']],
-    creates => "/var/www/exercise-webpage/index.html",
+    creates => '/var/www/exercise-webpage/index.html',
   }
 
   exec { 'git-fetch':
-    path    => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ],
-    cwd     => "/var/www/exercise-webpage",
-    command => "git checkout master -f",
+    path    => [ '/bin:/sbin:/usr/bin:/usr/sbin' ],
+    cwd     => '/var/www/exercise-webpage',
+    command => 'git checkout master -f',
     require => [Package['git'],File['/var/www/exercise-webpage']],
-    onlyif  => "test -f /var/www/exercise-webpage/index.html",
+    onlyif  => 'test -f /var/www/exercise-webpage/index.html',
   }
 
 }

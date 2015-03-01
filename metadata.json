@@ -1,9 +1,9 @@
 {
   "name": "seamusmurray-mynginx",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "seamusmurray",
   "summary": "Sample module to configure nginx to serve https://github.com/puppetlabs/exercise-webpage via TCP port 3000",
-  "license": "Apache 2.0",
+  "license": "MIT",
   "source": "https://github.com/githubatseamusmurray/mynginx",
   "project_page": "https://github.com/githubatseamusmurray/mynginx",
   "operatingsystem_support": [
