@@ -60,11 +60,6 @@ Compatible with the Operating Systems:
     SLES
     Ubuntu: 14.04, 12.04, 10.04
 
-This module does not 
-
-open up tcp port 8000 on the local firewall
- or 
-add a SELinux policy to permit binding to port 8000
 
 ## Development
 

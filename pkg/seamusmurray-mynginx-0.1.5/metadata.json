@@ -1,42 +1,42 @@
 {
   "name": "seamusmurray-mynginx",
-  "version": "0.1.6",
+  "version": "0.1.5",
   "author": "seamusmurray",
   "summary": "Sample module to configure nginx to serve https://github.com/puppetlabs/exercise-webpage via TCP port 8000",
   "license": "MIT",
   "source": "https://github.com/githubatseamusmurray/mynginx",
-  "project_page": "https://github.com/githubatseamusmurray/mynginx",
   "issues_url": "https://github.com/githubatseamusmurray/mynginx",
-  "description": "This is a test module created by myself for myself, it should not be used in production.",
   "operatingsystem_support": [
     {
+      "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "5.0",
         "6.0"
-      ],
-      "operatingsystem": "Debian"
+      ]
     },
     {
+      "operatingsystem": "RedHat",
       "operatingsystemrelease": [
         "5.0",
         "6.0",
         "7.0"
-      ],
-      "operatingsystem": "RedHat"
+      ]
     },
     {
       "operatingsystem": "SLES"
     },
     {
+      "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
         "14.04",
         "12.04",
         "10.04"
-      ],
-      "operatingsystem": "Ubuntu"
+      ]
     }
   ],
+  "description": "This is a test module created by myself for myself, it should not be used in production.",
+  "project_page": "https://github.com/githubatseamusmurray/mynginx",
   "dependencies": [
-  {"version_requirement":">= 0.2.2","name":"jfryman-nginx"}
+    {"version_requirement":">= 0.2.2","name":"jfryman-nginx"}
   ]
- }
+}

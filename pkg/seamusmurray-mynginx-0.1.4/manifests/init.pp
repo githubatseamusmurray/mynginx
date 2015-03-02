@@ -54,7 +54,7 @@ class mynginx {
 
   nginx::resource::vhost { 'exercise-webpage':
     www_root    => '/var/www/exercise-webpage',
-    listen_port => 8000,
+    listen_port => 3000,
   }
 
   notice("nginx daemon_user is set to ${nginx::params::daemon_user} for osfamily of ${::osfamily}")

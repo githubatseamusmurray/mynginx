@@ -41,7 +41,7 @@ requires:
 ### Beginning with mynginx
 
 puppet module install seamusmurray-mynginx
-class { 'mynginx': }
+class { mynginx: }
 
 ## Usage
 
@@ -60,11 +60,6 @@ Compatible with the Operating Systems:
     SLES
     Ubuntu: 14.04, 12.04, 10.04
 
-This module does not 
-
-open up tcp port 8000 on the local firewall
- or 
-add a SELinux policy to permit binding to port 8000
 
 ## Development
 
@@ -73,4 +68,4 @@ Sorry this is just a test module for myself.
 ## Release Notes/Contributors/Etc **Optional**
 
 bug fixed :P
-changed port from 3000 to 8000
+
